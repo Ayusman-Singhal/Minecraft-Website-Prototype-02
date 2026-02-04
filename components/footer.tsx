@@ -2,8 +2,8 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer id="community" className="relative py-12 px-6 lg:px-12 xl:px-16 bg-gradient-to-b from-[#e8f4fc] to-[#c4e5f7]">
-      <div className="max-w-screen-2xl mx-auto">
+    <footer id="community" className="relative py-12 bg-gradient-to-b from-[#e8f4fc] to-[#c4e5f7]">
+      <div className="mx-auto px-6 lg:px-12 xl:px-16">
         <div className="minecraft-box p-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {/* Logo and info */}

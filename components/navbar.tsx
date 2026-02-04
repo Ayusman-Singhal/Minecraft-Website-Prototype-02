@@ -56,7 +56,7 @@ export function Navbar() {
             <button className="hidden sm:block minecraft-btn px-4 py-2 text-white font-sans text-lg">
               Join Discord
             </button>
-            <div className="hidden lg:block minecraft-box px-3 py-1 text-sm font-sans text-[#1e40af]">
+            <div className="hidden lg:block minecraft-box px-5 py-2 text-lg font-sans text-[#1e40af]">
               play.spacebox.co
             </div>
             

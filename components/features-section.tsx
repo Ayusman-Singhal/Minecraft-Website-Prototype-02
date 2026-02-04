@@ -9,6 +9,10 @@ interface FeatureCardProps {
 }
 
 function FeatureCard({ title, description, imageSrc, imageAlt, reverse }: FeatureCardProps) {
+  // Make inventory UI larger
+  const isInventoryUI = imageSrc.includes('inventory-ui')
+  const imageSize = isInventoryUI ? "w-80 h-80 md:w-96 md:h-96" : "w-64 h-64 md:w-80 md:h-80"
+  
   return (
     <div className={`flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-8 lg:gap-16`}>
       <div className="flex-1 text-center lg:text-left">
@@ -19,16 +23,14 @@ function FeatureCard({ title, description, imageSrc, imageAlt, reverse }: Featur
           {description}
         </p>
       </div>
-      <div className="flex-1 relative">
-        <div className="minecraft-box p-4 inline-block">
-          <div className="relative w-64 h-64 md:w-80 md:h-80">
-            <Image
-              src={imageSrc || "/placeholder.svg"}
-              alt={imageAlt}
-              fill
-              className="object-contain"
-            />
-          </div>
+      <div className="flex-1 relative flex justify-center">
+        <div className={`relative ${imageSize}`}>
+          <Image
+            src={imageSrc || "/placeholder.svg"}
+            alt={imageAlt}
+            fill
+            className="object-contain drop-shadow-xl"
+          />
         </div>
       </div>
     </div>
@@ -59,7 +61,7 @@ export function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="relative py-20 px-4 bg-gradient-to-b from-[#dbeafe] to-[#c4e5f7]">
+    <section id="features" className="relative py-20 px-4 bg-gradient-to-b from-[#87CEEB] to-[#e8f4fc]">
       <div className="max-w-6xl mx-auto space-y-20">
         {features.map((feature, index) => (
           <FeatureCard key={index} {...feature} reverse={feature.reverse} />

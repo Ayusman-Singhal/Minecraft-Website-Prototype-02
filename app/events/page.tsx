@@ -58,6 +58,22 @@ export default function EventsPage() {
         subtitle="Limited-time adventures await!"
       />
       
+      {/* Hero Banner */}
+      <section className="py-12 bg-gradient-to-b from-[#b4e0fa] to-[#87CEEB]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="minecraft-box p-2 overflow-hidden">
+            <div className="relative w-full h-64 md:h-80">
+              <Image
+                src="/images/event-banner.png"
+                alt="Cosmic Events"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Current/Upcoming Events */}
       <section className="py-16 bg-gradient-to-b from-[#87CEEB] to-[#e8f4fc]">
         <div className="max-w-6xl mx-auto px-4">
@@ -73,13 +89,13 @@ export default function EventsPage() {
               >
                 <div className="flex flex-col md:flex-row gap-6">
                   {/* Event Image */}
-                  <div className="relative w-full md:w-48 h-40 flex-shrink-0 bg-gradient-to-br from-[#1e40af]/20 to-[#3b82f6]/20 flex items-center justify-center">
+                  <div className="relative w-full md:w-48 h-40 flex-shrink-0 bg-gradient-to-br from-[#4ade80]/30 to-[#22d3ee]/30 flex items-center justify-center">
                     <Image
-                      src="/images/mascot.png"
+                      src="/images/planet-logo.png"
                       alt={event.name}
                       width={100}
                       height={100}
-                      className="object-contain"
+                      className="object-contain float-animation"
                     />
                   </div>
 

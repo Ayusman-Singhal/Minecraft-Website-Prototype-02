@@ -14,36 +14,42 @@ const itemCategories = [
     description: "Rare crystals found on distant asteroids. Used for advanced crafting.",
     rarity: "Legendary",
     color: "from-purple-400 to-blue-500",
+    image: "space-crystal.png",
   },
   {
     name: "Cosmic Ore",
     description: "Basic building material harvested from space rocks.",
     rarity: "Common",
     color: "from-gray-400 to-gray-600",
+    image: "cosmic-ore.png",
   },
   {
     name: "Nebula Dust",
     description: "Magical dust collected from passing nebulae. Powers special abilities.",
     rarity: "Rare",
     color: "from-pink-400 to-purple-500",
+    image: "nebula-dust.png",
   },
   {
     name: "Solar Fragments",
     description: "Energy-rich fragments from nearby stars. Essential for fuel.",
     rarity: "Uncommon",
     color: "from-yellow-400 to-orange-500",
+    image: "solar-fragments.png",
   },
   {
     name: "Void Essence",
     description: "Mysterious substance from the edges of black holes.",
     rarity: "Mythic",
     color: "from-indigo-600 to-black",
+    image: "void-essence.png",
   },
   {
     name: "Alien Artifacts",
     description: "Ancient relics left behind by cosmic civilizations.",
     rarity: "Epic",
     color: "from-cyan-400 to-teal-500",
+    image: "alien-artifact.png",
   },
 ]
 
@@ -77,8 +83,16 @@ export default function ItemsPage() {
                 key={item.name}
                 className="minecraft-box p-6 hover:translate-y-[-4px] transition-transform"
               >
-                <div className={`w-16 h-16 mb-4 bg-gradient-to-br ${item.color} flex items-center justify-center`}>
-                  <div className="w-10 h-10 bg-white/30" />
+                <div className="relative w-20 h-20 mb-4 mx-auto">
+                  <div className={`w-full h-full flex items-center justify-center p-2`}>
+                    <Image
+                      src={`/images/${item.image}`}
+                      alt={item.name}
+                      width={64}
+                      height={64}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="font-mono text-xl text-[#1e40af]">{item.name}</h3>

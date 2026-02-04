@@ -23,7 +23,7 @@ function ExploreCard({ title, bgColor, href, textColor }: ExploreCardProps) {
 
 export function ExploreSection() {
   const cards = [
-    { title: "Items & Recipes", bgColor: "#3b82f6", textColor: "#1e40af", href: "/items" },
+    { title: "Recipes", bgColor: "#3b82f6", textColor: "#1e40af", href: "/items" },
     { title: "Spaceships", bgColor: "#22d3ee", textColor: "#1e40af", href: "/ships" },
     { title: "Events", bgColor: "#4ade80", textColor: "#1e40af", href: "/events" },
   ]

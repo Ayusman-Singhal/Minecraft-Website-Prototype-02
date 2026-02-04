@@ -9,7 +9,7 @@ export function ShipsSection() {
             <div className="minecraft-box p-4 inline-block">
               <div className="relative w-64 h-64 md:w-80 md:h-80">
                 <Image
-                  src="/images/golden-chest.png"
+                  src="/images/spaceship-cruiser.png"
                   alt="Space ship"
                   fill
                   className="object-contain"

@@ -15,6 +15,7 @@ const ships = [
     cargo: 20,
     armor: 30,
     tier: "Starter",
+    image: "spaceship-scout.png",
   },
   {
     name: "Cargo Hauler",
@@ -23,6 +24,7 @@ const ships = [
     cargo: 95,
     armor: 60,
     tier: "Common",
+    image: "spaceship-cargo.png",
   },
   {
     name: "Stellar Cruiser",
@@ -31,6 +33,7 @@ const ships = [
     cargo: 50,
     armor: 70,
     tier: "Rare",
+    image: "spaceship-cruiser.png",
   },
   {
     name: "Void Runner",
@@ -39,6 +42,7 @@ const ships = [
     cargo: 25,
     armor: 40,
     tier: "Epic",
+    image: "spaceship-runner.png",
   },
   {
     name: "Galactic Fortress",
@@ -47,6 +51,7 @@ const ships = [
     cargo: 80,
     armor: 100,
     tier: "Legendary",
+    image: "spaceship-fortress.png",
   },
   {
     name: "Cosmic Phoenix",
@@ -55,6 +60,7 @@ const ships = [
     cargo: 60,
     armor: 90,
     tier: "Mythic",
+    image: "spaceship-phoenix.png",
   },
 ]
 
@@ -113,7 +119,7 @@ export default function ShipsPage() {
                 {/* Ship Image */}
                 <div className="relative w-full h-40 mb-4 bg-gradient-to-b from-[#1e40af]/10 to-transparent flex items-center justify-center">
                   <Image
-                    src="/images/golden-chest.png"
+                    src={`/images/${ship.image}`}
                     alt={ship.name}
                     width={120}
                     height={120}
@@ -147,7 +153,7 @@ export default function ShipsPage() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="relative w-48 h-48 flex-shrink-0">
                 <Image
-                  src="/images/elytra-character.png"
+                  src="/images/spaceship-scout.png"
                   alt="Ship builder"
                   fill
                   className="object-contain"
